@@ -1,0 +1,4 @@
+In IoC, only the objects will be created that will be made through beans in spring.xml
+
+Note: spring.xml is the file configuration we have to maintain
+if not using springboot.

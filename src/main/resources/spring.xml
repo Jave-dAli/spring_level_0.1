@@ -4,7 +4,13 @@
 
 
 <beans>
+<!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
     <bean id="dev" class="com.javed.Dev">
+
+    </bean>
+
+    <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
+    <bean id="laptop" class="com.javed.Laptop">
 
     </bean>
 </beans>
