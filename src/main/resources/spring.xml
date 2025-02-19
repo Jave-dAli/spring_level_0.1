@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
-        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<beans>
+
+
 <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
-    <bean id="dev" class="com.javed.Dev">
-        <property name="laptop" ref="lap1"/>
+    <bean id="dev" class="com.javed.Dev" autowire="byName">
 
-<!--        <property name="age" value="18"/>  &lt;!&ndash; it uses setter method &ndash;&gt;-->
-<!--        <constructor-arg value="20"/>   &lt;!&ndash; For multiple args, use index &ndash;&gt;-->
+        <property name="com" ref="desk1"/> <!-- Note 1.1 -->
     </bean>
 
     <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
-    <bean id="lap1" class="com.javed.Laptop">
-
+    <bean id="com" class="com.javed.Laptop">
     </bean>
+    <bean id="desk1" class="com.javed.Desktop" primary="true">
+    </bean>
+
 </beans>
