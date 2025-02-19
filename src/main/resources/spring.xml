@@ -6,6 +6,12 @@
 <beans>
 <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
     <bean id="dev" class="com.javed.Dev">
+        <property name="age" value="18"/>  <!-- it uses setter method -->
+
+    </bean>
+
+    <!-- another obj of Dev is created in IoC -->
+    <bean id="dev1" class="com.javed.Dev">
 
     </bean>
 
