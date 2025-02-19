@@ -6,17 +6,13 @@
 <beans>
 <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
     <bean id="dev" class="com.javed.Dev">
-        <property name="age" value="18"/>  <!-- it uses setter method -->
-
-    </bean>
-
-    <!-- another obj of Dev is created in IoC -->
-    <bean id="dev1" class="com.javed.Dev">
-
+        <property name="laptop" ref="lap1"/>
+<!--        <property name="age" value="18"/>  &lt;!&ndash; it uses setter method &ndash;&gt;-->
+<!--        <constructor-arg value="20"/>   &lt;!&ndash; For multiple args, use index &ndash;&gt;-->
     </bean>
 
     <!--    Following bean creates obj of Dev class in IoC (Inversion of Control)   -->
-    <bean id="laptop" class="com.javed.Laptop">
+    <bean id="lap1" class="com.javed.Laptop">
 
     </bean>
 </beans>

@@ -2,3 +2,13 @@ In IoC, only the objects will be created that will be made through beans in spri
 
 Note: spring.xml is the file configuration we have to maintain
 if not using springboot.
+
+<constructor-arg value="20"/>
+Above line is constructor injection for age attribute
+For it to work, there need to be a parameterized constructor for age in Dev class.
+
+<property name="laptop" ref="lap1"/>
+Above line in spring.xml looks for bean named 'lap1', and wires(connects)
+it with Dev bean in which it is invoked.
+This is setter injection for laptop obj.
+For it to work, there need to be setter for the laptop obj in Dev class.
