@@ -12,3 +12,6 @@ Above line in spring.xml looks for bean named 'lap1', and wires(connects)
 it with Dev bean in which it is invoked.
 This is setter injection for laptop obj.
 For it to work, there need to be setter for the laptop obj in Dev class.
+
+Getter injection is simple, just like for age, for laptop is same.
+
